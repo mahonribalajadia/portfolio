@@ -1,0 +1,117 @@
+@media screen and (min-width: 800px) {
+    main {
+        margin: 0 auto;
+    }
+
+    h1 {
+        margin: 01rem 0 2rem 0;
+    }
+
+    /* Class Selectors */
+
+    .hero-sec ul {
+        justify-content: left;
+        gap: 1rem;
+    }
+
+    .skills-sec .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects-sec .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .projects-sec .card-title i {
+        display: none;
+    }
+
+    .tools-sec .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ID Selectors */
+    
+    #rocket-cursor {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        pointer-events: none;
+        z-index: 9999;
+        will-change: transform;
+        filter: drop-shadow(0 0 10px white);
+    }
+
+    #circle-2 {
+        top: 67px;
+    }
+
+    #circle-3 {
+        top: 130px;
+    }
+
+    #circle-4 {
+        top: 192px;
+    }
+
+    #circle-5 {
+        top: 255px;
+    }
+
+    #circle-6 {
+        top: 316px;
+    }
+
+    /* Psuedo Classes */
+
+    .hero-sec a:hover,
+    .file-sec a:hover {
+        border: 1px solid white;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        scale: 1.1;
+    }
+
+    .projects-sec a:hover .card {
+        border: 1px solid white;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .projects-sec a:hover .card img {
+        transform: translateY(-137px);
+    }
+
+    .skills-sec .card:hover svg,
+    .tools-sec .card:hover svg {
+        filter: drop-shadow(0 0 10px white);
+    }
+
+    .projects-sec a:hover i {
+        display: block;
+    }
+
+    /* Animation */
+
+    #rocket-cursor.docked {
+        animation: enginePulse 1.0s infinite ease-in-out;
+    }
+
+    @keyframes enginePulse {
+        0%, 100% { filter: drop-shadow(0 0 8px white); }
+        50% { filter: drop-shadow(0 0 18px white); }
+    }
+    
+    /* Hide on mobile and tablets */
+    @media (pointer: coarse) {
+        #rocket-cursor, .particle {
+            display: none !important;
+        }
+        body {
+            cursor: auto !important; /* Restore default touch behavior */
+        }
+    }
+}
