@@ -71,8 +71,9 @@ a {
 .hero-sec ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     padding-left: 0;
+    flex-wrap: wrap;
 }
 
 .hero-sec a,
@@ -271,6 +272,7 @@ a {
 #timeline-1 {
     grid-column: 3/4;
     grid-row: 1/2;
+    position: relative;
 }
 
 #timeline-2 {
@@ -302,23 +304,23 @@ a {
 }
 
 #circle-2 {
-    top: 100px;
+    top: 17.5%;
 }
 
 #circle-3 {
-    top: 197px;
+    top: 34%;
 }
 
 #circle-4 {
-    top: 292px;
+    top: 50.5%;
 }
 
 #circle-5 {
-    top: 389px;
+    top: 67.5%;
 }
 
 #circle-6 {
-    top: 485px;
+    top: 84%;
 }
 
 /* Animation */
